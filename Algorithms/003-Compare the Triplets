@@ -1,0 +1,15 @@
+def compareTriplets(a, b):
+    bob = 0
+    alice = 0
+    for x in range(3):
+        if a[x]>b[x]:
+            alice+=1
+        elif a[x]<b[x]:
+            bob+=1
+        else:
+            pass
+    return [alice,bob]
+a = list(map(int, input().rstrip().split()))
+b = list(map(int, input().rstrip().split()))
+result = compareTriplets(a, b)
+print (*result)
