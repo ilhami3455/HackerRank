@@ -1,0 +1,21 @@
+def hourglassSum(arr):
+    x,y,z=0,1,2
+    son_liste=[]
+    for i in range(4):
+        a=(arr[x][0]+arr[x][1]+arr[x][2]+arr[y][1]+arr[z][0]+arr[z][1]+arr[z][2])
+        b=(arr[x][3]+arr[x][1]+arr[x][2]+arr[y][2]+arr[z][3]+arr[z][1]+arr[z][2])
+        c=(arr[x][3]+arr[x][4]+arr[x][2]+arr[y][3]+arr[z][3]+arr[z][4]+arr[z][2])
+        d=(arr[x][3]+arr[x][4]+arr[x][5]+arr[y][4]+arr[z][3]+arr[z][4]+arr[z][5])
+        son_liste.append(a)
+        son_liste.append(b)
+        son_liste.append(c)
+        son_liste.append(d)
+        x+=1
+        y+=1
+        z+=1
+    return max(son_liste)
+arr = []
+for _ in range(6):
+    arr.append(list(map(int, input().rstrip().split())))
+result=hourglassSum(arr)
+print(result)
