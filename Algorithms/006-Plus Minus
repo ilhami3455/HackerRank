@@ -1,0 +1,8 @@
+def plusMinus(arr):
+    a = [x for x in arr if x < 0]
+    b = [y for y in arr if y > 0]
+    c = [z for z in arr if z == 0]
+    return print(round(len(b)/len(arr),5),"\n",round(len(a)/len(arr),5),"\n",round(len(c)/len(arr),5), sep="")
+n = int(input())
+arr = list(map(int, input().rstrip().split()))
+plusMinus(arr)
