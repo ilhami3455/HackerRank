@@ -1,0 +1,19 @@
+def diagonalDifference(arr):
+    a,b,c,d=0,0,(len(arr)-1),0
+    list1=[]
+    list2=[]
+    for i in range(n):
+        list1.append(arr[a][b])
+        a+=1
+        b+=1
+    for i in range(n):
+        list2.append(arr[d][c])
+        d+=1
+        c-=1
+    return abs(sum(list1)-sum(list2))
+n = int(input().strip())
+arr = []
+for _ in range(n):
+    arr.append(list(map(int, input().rstrip().split())))
+result = diagonalDifference(arr)
+print(result)
