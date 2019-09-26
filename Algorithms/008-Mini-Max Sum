@@ -1,0 +1,9 @@
+def miniMaxSum(arr):
+    arr2=arr.copy()
+    arr.remove(min(arr))
+    max1=sum(arr)
+    arr2.remove(max(arr2))
+    min1=sum(arr2)
+    return print(min1,max1)
+arr = list(map(int, input().rstrip().split()))
+miniMaxSum(arr)
