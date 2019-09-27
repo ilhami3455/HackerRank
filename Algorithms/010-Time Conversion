@@ -1,0 +1,16 @@
+def timeConversion(s):
+    if s[8]=="A":
+        if s[:2]=='12':
+            if s[2:]==":00:00AM":
+                print('00:00:00')
+            else:
+                print("00",s[2:8],sep="")
+        else:
+            print(s[:8])
+    elif s[8]=="P":
+        if s[0:2]=="12":
+            print(s[:8])
+        else:
+            print(int(s[0:2])+12,s[2:8],sep="")
+s = input()
+result = timeConversion(s)
