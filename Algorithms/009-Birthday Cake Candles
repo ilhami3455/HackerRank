@@ -1,0 +1,9 @@
+def birthdayCakeCandles(ar):
+    x=max(ar)
+    y=ar.count(x)
+    return y
+
+ar_count = int(input())
+ar = list(map(int, input().rstrip().split()))
+result = birthdayCakeCandles(ar)
+print(result)
