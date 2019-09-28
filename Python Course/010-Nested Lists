@@ -1,0 +1,14 @@
+scoresheet=[]
+for _ in range(int(input())):
+    name = input()
+    score = float(input())
+    scoresheet.append([name,score])
+liste=[]
+for isim,puan in scoresheet:
+    liste.append(puan)
+score=sorted(list(set(liste)))[1]
+liste1=[]
+for isim,puan in scoresheet:
+    if puan==score:
+        liste1.append(isim)
+print(*sorted(liste1),sep="\n")
