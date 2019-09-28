@@ -1,0 +1,23 @@
+N = int(input())
+liste = []
+for i in range(N):
+    hepsi = input().split()
+    secim = hepsi[0]
+    if secim == 'insert':
+        i = int(hepsi[1])
+        e = int(hepsi[2])
+        liste.insert(i, e)
+    elif secim == 'print':
+        print(liste)
+    elif secim == 'remove':
+        e = int(hepsi[1])
+        liste.remove(e)
+    elif secim == 'append':
+        e = int(hepsi[1])
+        liste.append(e)
+    elif secim == 'sort':
+        liste.sort()
+    elif secim == 'pop':
+        liste.pop()
+    elif secim == 'reverse':
+        liste.reverse()
