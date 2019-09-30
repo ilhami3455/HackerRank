@@ -1,0 +1,16 @@
+def breakingRecords(scores):
+    arr1=[]
+    arr1.append(scores[0])
+    a=0
+    b=0
+    for i in scores:
+        if i<min(arr1):
+            a+=1
+            arr1.append(i)
+        if i>max(arr1):
+            b+=1
+            arr1.append(i)
+    return print(b,a)
+n = int(input())
+scores = list(map(int, input().rstrip().split()))
+breakingRecords(scores)
