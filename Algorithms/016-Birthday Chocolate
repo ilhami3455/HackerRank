@@ -1,0 +1,21 @@
+def birthday(s, d, m):
+    arr1=s.copy()
+    liste=[]
+    sayac=0
+    while sayac<((len(s)+1)-m):
+        liste.append(arr1[0:m])
+        a=arr1[0]
+        arr1.remove(a)
+        sayac+=1
+    count=0
+    for i in range(len(liste)):
+        if sum(liste[i]) == d:
+            count+=1
+    return count
+n = int(input().strip())
+s = list(map(int, input().rstrip().split()))
+dm = input().rstrip().split()
+d = int(dm[0])
+m = int(dm[1])
+result = birthday(s, d, m)
+print(result)
