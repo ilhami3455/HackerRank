@@ -1,0 +1,18 @@
+def getTotalX(a, b):
+    n=len(arr)
+    m=len(brr)
+    sayac=0
+    for i in range(max(arr),min(brr)+1):
+        lista=[i%x for x in arr]
+        liste=[x%i for x in brr]
+        if lista.count(0)+liste.count(0)==n+m:
+            sayac+=1
+    return sayac
+
+first_multiple_input = input().rstrip().split()
+n = int(first_multiple_input[0])
+m = int(first_multiple_input[1])
+arr = list(map(int, input().rstrip().split()))
+brr = list(map(int, input().rstrip().split()))
+total = getTotalX(arr, brr)
+print(total)
