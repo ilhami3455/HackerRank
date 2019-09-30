@@ -1,0 +1,4 @@
+n = int(input())
+integer_list = map(int, input().split())
+liste=tuple(integer_list)
+print(hash(liste))
