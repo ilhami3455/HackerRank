@@ -1,0 +1,22 @@
+def dayOfProgrammer(a):
+    if 1699<a<1918:
+        if a%4==0:
+            print("12.09.",a,sep="")
+        else:
+            print("13.09.",a,sep="")
+    elif a==1918:
+        print("26.09.1918")
+    else:
+        if a%4==0:
+            if a%100==0:
+                if a%400==0:
+                    print("12.09.",a,sep="")
+                else:
+                    print("13.09.", a, sep="")
+            else:
+                print("12.09.", a, sep="")
+        else:
+            print("13.09.",a,sep="")
+
+a = int(input().strip())
+result = dayOfProgrammer(a)
