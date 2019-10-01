@@ -1,0 +1,9 @@
+def migratoryBirds(arr):
+    liste=[]
+    for i in range(1,6):
+        liste.append(arr.count(i))
+    return (liste.index(max(liste))+1)
+arr_count = int(input().strip())
+arr = list(map(int, input().rstrip().split()))
+result = migratoryBirds(arr)
+print(result)
