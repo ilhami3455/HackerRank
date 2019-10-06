@@ -1,0 +1,18 @@
+def countingValleys(n, s):
+    a=0
+    liste=[]
+    for i in s:
+        if i=='U':
+            a+=1
+            liste.append(a)
+        if i=='D':
+            a-=1
+            liste.append(a)
+    yeniliste=[]
+    for j in range(len(s)-1):
+        yeniliste.append([liste[j],liste[j+1]])
+    return (yeniliste.count([-1,0]))
+n = int(input())
+s = input()
+result = countingValleys(n, s)
+print(result)
