@@ -1,0 +1,15 @@
+def climbingLeaderboard(scores, alice):
+    sonuc=[]
+    yeniscorelist=(sorted(set(scores),reverse=True))
+    sayi=len(yeniscorelist)
+    for i in alice:
+        while sayi>0 and i >= yeniscorelist[sayi-1]:
+            sayi-=1
+        sonuc.append(sayi+1)
+    return sonuc
+scores_count = int(input())
+scores = list(map(int, input().rstrip().split()))
+alice_count = int(input())
+alice = list(map(int, input().rstrip().split()))
+result=climbingLeaderboard(scores, alice)
+print(*result,sep="\n")
