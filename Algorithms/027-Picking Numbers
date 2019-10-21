@@ -1,0 +1,9 @@
+def pickingNumbers(a):
+    kume=set(a)
+    toplam=[]
+    for i in kume:
+        toplam.append((a.count(i))+(a.count(i+1)))
+    print(max(toplam))
+n = int(input().strip())
+a = list(map(int, input().rstrip().split()))
+pickingNumbers(a)
