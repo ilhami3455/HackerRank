@@ -1,0 +1,12 @@
+def hurdleRace(k, height):
+    a=max(height)-k
+    if a<=0:
+        return 0
+    else:
+        return a
+nk = input().split()
+n = int(nk[0])
+k = int(nk[1])
+height = list(map(int, input().rstrip().split()))
+result = hurdleRace(k, height)
+print(result)
