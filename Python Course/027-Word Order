@@ -1,0 +1,11 @@
+n=int(input())
+sozluk={}
+for i in range(n):
+    a=input()
+    if a not in sozluk:
+        sozluk[a]=1
+    else:
+        sozluk[a]=sozluk[a]+1
+print(len(sozluk))
+for i in sozluk:
+    print(sozluk[i],end=" ")
