@@ -1,0 +1,6 @@
+from itertools import product
+A = list(map(int, input().rstrip().split()))
+B = list(map(int, input().rstrip().split()))
+A.sort()
+B.sort()
+print(*list(product(A,B)))
