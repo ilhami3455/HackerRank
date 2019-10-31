@@ -1,0 +1,10 @@
+def viralAdvertising(n):
+    like=2
+    shared=6
+    for i in range(n-1):
+        like+=shared//2
+        shared=(shared//2)*3
+    return like
+n = int(input())
+result = viralAdvertising(n)
+print(result)
