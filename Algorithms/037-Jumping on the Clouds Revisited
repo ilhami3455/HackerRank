@@ -1,0 +1,29 @@
+def jumpingOnClouds(c, k):
+    liste1=c.copy()
+    n=len(c)
+    if n%k==0:
+        liste1 = []
+        for i in range(0, n, k):
+            liste1.append(c[i])
+        liste1.append(0)
+        return 100 - ((len(liste1) - 1) + (liste1.count(1) * 2))
+    else:
+        while True:
+            if len(c)%k!=0:
+                c += liste1
+                continue
+            else:
+                break
+        a=len(c)
+        listeson=[]
+        for i in range(0, a, k):
+            listeson.append(c[i])
+        listeson.append(0)
+        return 100 - ((len(listeson) - 1) + (listeson.count(1) * 2))
+
+nk = input().split()
+n = int(nk[0])
+k = int(nk[1])
+c = list(map(int, input().rstrip().split()))
+result = jumpingOnClouds(c, k)
+print(result)
