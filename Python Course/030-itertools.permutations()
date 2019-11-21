@@ -1,0 +1,9 @@
+Sk=input().split()
+S=Sk[0]
+S=list(S)
+S.sort()
+k=int(Sk[1])
+from itertools import permutations
+T=permutations(S,k)
+for i in T:
+    print(*i,sep="")
