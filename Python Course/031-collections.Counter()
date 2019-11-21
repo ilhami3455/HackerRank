@@ -1,0 +1,12 @@
+X=int(input())
+NofShoes=list(map(int,input().rstrip().split()))
+N=int(input())
+total=0
+for i in range(N):
+    SP=input().split()
+    shoesize=int(SP[0])
+    price=int(SP[1])
+    if shoesize in NofShoes:
+        total+=price
+        NofShoes.remove(shoesize)
+print(total)
