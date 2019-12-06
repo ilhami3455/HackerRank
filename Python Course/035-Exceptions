@@ -1,0 +1,11 @@
+T=int(input())
+for i in range(T):
+    ab=input().rstrip().split()
+    try:
+        a=int(ab[0])
+        b=int(ab[1])
+        print(a//b)
+    except ZeroDivisionError as Z:
+        print('Error Code:',Z)
+    except ValueError as V:
+        print('Error Code:',V)
