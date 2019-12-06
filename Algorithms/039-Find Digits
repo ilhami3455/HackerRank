@@ -1,0 +1,9 @@
+def findDigits(n):
+    m=str(n)
+    liste=[i for i in m if int(i)!=0 if n%int(i)==0]
+    return len(liste)
+t = int(input())
+for t_itr in range(t):
+    n = int(input())
+    result = findDigits(n)
+    print(result)
