@@ -1,0 +1,19 @@
+nm=input().split()
+n=int(nm[0])
+m=int(nm[1])
+A=[]
+B=[]
+for i in range(n):
+    A.append(input())
+for i in range(m):
+    B.append(input())
+liste=[]
+for i in range(len(B)):
+    for j in range(len(A)):
+        if B[i]==A[j]:
+            liste.append(j+1)
+    if not liste:
+        print("-1")
+    else:
+        print(*liste)
+    liste=[]
