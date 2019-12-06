@@ -1,0 +1,9 @@
+from collections import namedtuple
+n = int(input())
+kategori = input()
+count = 0
+deger = namedtuple('sinif', kategori)
+for i in range(n):
+    veri = deger(*input().split())
+    count += int(veri.MARKS)
+print('{:.2f}'.format(count/n))
