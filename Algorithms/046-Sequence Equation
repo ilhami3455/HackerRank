@@ -1,0 +1,13 @@
+def permutationEquation(arr):
+    arr1=sorted(arr)
+    liste=[]
+    for i in arr1:
+        liste.append(arr.index(i)+1)
+    sonliste=[]
+    for i in liste:
+        sonliste.append(arr.index(i)+1)
+    print(*sonliste,sep="\n")
+
+n = int(input())
+arr = list(map(int, input().rstrip().split()))
+permutationEquation(arr)
