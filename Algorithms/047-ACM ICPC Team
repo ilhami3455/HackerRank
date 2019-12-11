@@ -1,0 +1,21 @@
+from itertools import combinations
+def acmTeam(topic):
+    team=combinations(topic,2)
+    known=[]
+    sayac=0
+    for i,j in team:
+        for x in range(m):
+            if i[x]=="1" or j[x]=="1":
+                sayac+=1
+        known.append(sayac)
+        sayac=0
+    print(max(known),known.count(max(known)),sep="\n")
+
+nm = input().split()
+n = int(nm[0])
+m = int(nm[1])
+topic = []
+for _ in range(n):
+    topic_item = input()
+    topic.append(topic_item)
+acmTeam(topic)
