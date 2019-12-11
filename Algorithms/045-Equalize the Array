@@ -1,0 +1,8 @@
+def equalizeArray(arr):
+    from collections import Counter
+    d=max(Counter(arr).values())
+    print(len(arr)-d)
+
+n = int(input())
+arr = list(map(int, input().rstrip().split()))
+equalizeArray(arr)
