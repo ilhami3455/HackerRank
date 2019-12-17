@@ -1,0 +1,14 @@
+def kaprekarNumbers(p, q):
+    kapper=[1, 9, 45, 55, 99, 297, 703, 999, 2223, 2728, 4950, 5050, 7272, 7777, 9999, 17344, 22222,77778, 82656, 95121, 99999]
+    liste=[]
+    for i in range(p,q+1):
+        if i in kapper:
+            liste.append(i)
+    if not liste:
+        print("INVALID RANGE")
+    else:
+        print(*liste)
+
+p = int(input())
+q = int(input())
+kaprekarNumbers(p, q)
