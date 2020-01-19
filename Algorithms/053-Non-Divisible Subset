@@ -1,0 +1,20 @@
+def nonDivisibleSubset(k, s):
+    s=set(s)
+    kalanlar=[i%k for i in s]
+    liste=[0]*k
+    sayac=0
+    for i in kalanlar:
+        liste[i] += 1
+    for i in range(k//2+1):
+        if i==0 or k%2==0 and i == k//2:
+            if liste[i]>0:
+                sayac+=1
+        else:
+            sayac += max(liste[i], liste[k - i])
+    return sayac
+first_multiple_input = input().rstrip().split()
+n = int(first_multiple_input[0])
+k = int(first_multiple_input[1])
+s = list(map(int, input().rstrip().split()))
+result = nonDivisibleSubset(k, s)
+print(result)
