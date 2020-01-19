@@ -1,0 +1,25 @@
+def organizingContainers(container):
+    capacity=[]
+    ballno=[]
+    sayac=0
+    for i in range(n):
+        capacity.append(sum(container[i]))
+    for i in range(n):
+        for j in range(n):
+            sayac+=container[j][i]
+        ballno.append(sayac)
+        sayac=0
+    capacity.sort()
+    ballno.sort()
+    if capacity==ballno:
+        print("Possible")
+    else:
+        print("Impossible")
+
+q = int(input())
+for q_itr in range(q):
+    n = int(input())
+    container = []
+    for _ in range(n):
+        container.append(list(map(int, input().rstrip().split())))
+    organizingContainers(container)
