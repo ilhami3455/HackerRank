@@ -1,0 +1,7 @@
+N = int(input())
+total_set=set()
+for i in range(N):
+    data= input()
+    total_set.add(data)
+
+print(len(total_set))
