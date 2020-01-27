@@ -1,0 +1,9 @@
+def strangeCounter(t):
+    a=3
+    while t>a:
+        t-=a
+        a*=2
+    print(a-t+1)
+
+t = int(input())
+strangeCounter(t)
