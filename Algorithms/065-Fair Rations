@@ -1,0 +1,16 @@
+def fairRations(B):
+    count=0
+    if sum(B)%2!=0:
+        print("NO")
+        quit()
+    else:
+        for i in range(len(B)-1):
+            if B[i]%2!=0:
+                count+=2
+                B[i] += 1
+                B[i + 1] += 1
+    print(count)
+
+N = int(input())
+B = list(map(int, input().rstrip().split()))
+fairRations(B)
