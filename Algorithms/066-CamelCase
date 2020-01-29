@@ -1,0 +1,4 @@
+def camelcase(s):
+    print(len([i for i in s if i.isupper()])+1)
+s = input()
+camelcase(s)
