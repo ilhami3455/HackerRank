@@ -1,0 +1,20 @@
+def workbook(n, k, arr):
+    i=0 # chapter number
+    j=1 # page number
+    m=1 # problem number
+    count=0 # special problem
+    while i<n:
+        if m<=j and j<= min(m+ k-1, arr[i]):
+            count+=1
+        j+=1
+        m+=k
+        if m>arr[i]:
+            i+=1
+            m=1
+    print(count)
+
+nk = input().split()
+n = int(nk[0])
+k = int(nk[1])
+arr = list(map(int, input().rstrip().split()))
+workbook(n, k, arr)
