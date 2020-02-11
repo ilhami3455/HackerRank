@@ -1,0 +1,13 @@
+def stones(n, a, b):
+    sonuc=set()
+    for i in range(n):
+        sonuc.add(a*i+(b*(n-1-i)))
+    return sorted(sonuc)
+
+T = int(input())
+for T_itr in range(T):
+    n = int(input())
+    a = int(input())
+    b = int(input())
+    result = stones(n, a, b)
+    print(*result)
