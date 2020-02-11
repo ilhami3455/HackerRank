@@ -1,0 +1,24 @@
+import calendar
+x = input().rstrip().split()
+month=int(x[0])
+day=int(x[1])
+year=int(x[2])
+weekday = calendar.weekday(year,month,day)
+def dayname(weekday):
+    if weekday == 0:
+        return "MONDAY"
+    if weekday == 1:
+        return "TUESDAY"
+    if weekday == 2:
+        return "WEDNESDAY"
+    if weekday == 3:
+        return "THURSDAY"
+    if weekday == 4:
+        return "FRIDAY"
+    if weekday == 5:
+        return "SATURDAY"
+    if weekday == 6:
+        return "SUNDAY"
+
+result = dayname(weekday)
+print(result)
