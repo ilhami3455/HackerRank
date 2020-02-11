@@ -1,0 +1,15 @@
+def quickSort(arr):
+    left=[]
+    equal=[]
+    right=[]
+    for i in arr:
+        if i<arr[0]:
+            left.append(i)
+        elif i>arr[0]:
+            right.append(i)
+        else:
+            equal.append(i)
+    print(*(left+equal+right))
+n = int(input())
+arr = list(map(int, input().rstrip().split()))
+quickSort(arr)
