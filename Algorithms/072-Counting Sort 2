@@ -1,0 +1,7 @@
+def countingSort(arr):
+    return sorted(arr)
+
+n = int(input())
+arr = list(map(int, input().rstrip().split()))
+result = countingSort(arr)
+print(*result)
