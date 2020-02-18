@@ -1,0 +1,8 @@
+def countingSort(arr):
+    liste=[0 for i in range(100)]
+    for j in arr:
+        liste[j]+=1
+    print(*liste)
+n = int(input())
+arr = list(map(int, input().rstrip().split()))
+countingSort(arr)
