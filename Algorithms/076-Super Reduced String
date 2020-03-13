@@ -1,0 +1,15 @@
+def superReducedString(s):
+    liste=[]
+    for i in s:
+        if liste and liste[-1] == i:
+            liste.pop()
+        else:
+            liste.append(i)
+    liste= "".join(liste)
+    if not liste:
+        print("Empty String")
+    else:
+        print(liste)
+
+s = input()
+superReducedString(s)
